@@ -1,6 +1,7 @@
 let currentSong = new Audio();
 let songs;
 let currFolder;
+console.log("now commit")
 
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
