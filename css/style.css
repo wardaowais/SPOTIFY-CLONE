@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-:root{
-    --a:0;
+:root {
+    --a: 0;
 }
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-.close{
+
+.close {
     display: none;
 }
 
@@ -117,7 +119,8 @@ body {
 .spotifyPlaylists {
     padding: 16px;
 }
-.spotifyPlaylists  h1{
+
+.spotifyPlaylists h1 {
     padding: 16px;
 }
 
@@ -141,7 +144,8 @@ body {
 
 
 }
-.card:hover{
+
+.card:hover {
     background-color: rgb(70, 69, 69);
     cursor: pointer;
     --a: 1;
@@ -318,18 +322,19 @@ body {
     cursor: pointer;
 }
 
-.timevol{
+.timevol {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .songtime {
     color: black;
     padding: 0 12px;
     width: 125px;
 }
 
-.songinfo{
+.songinfo {
     color: black;
     padding: 0 12px;
     width: 250px;
@@ -341,16 +346,19 @@ body {
     margin: 20px 0;
     gap: 88px;
 }
-.volume{
+
+.volume {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 22px;
     cursor: pointer;
 }
-.range input{
+
+.range input {
     cursor: pointer;
 }
+
 @media (max-width: 1347px) {
     .left {
         background-color: black;
@@ -364,7 +372,8 @@ body {
 
     }
 
-    .songinfo , .songtime{
+    .songinfo,
+    .songtime {
         width: auto;
     }
 
@@ -375,8 +384,8 @@ body {
         top: 30px;
         width: 31px;
     }
-   
-    .timevol{
+
+    .timevol {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -392,10 +401,14 @@ body {
 
     .playbar {
         width: calc(100vw - 60px);
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
 
     }
-    .seekbar{
+
+    .seekbar {
         width: calc(100vw - 60px);
 
     }
@@ -403,15 +416,18 @@ body {
     .hamburger {
         display: block;
     }
-    .card{
+
+    .card {
         width: 44vw;
 
     }
-    .cardContainer{
+
+    .cardContainer {
         margin: 0;
         justify-content: center;
     }
-    .abovebar{
+
+    .abovebar {
         flex-direction: column;
         gap: 23px;
         align-items: center;
@@ -419,18 +435,19 @@ body {
     }
 
 }
-@media (max-width: 500px){
 
-    .buttons{
+@media (max-width: 500px) {
+
+    .buttons {
         padding: 15px 0px;
     }
 
     .buttons>* {
         margin: 0 15px 0 2px;
-    
+
     }
-    
-    .card{
+
+    .card {
         width: 80vw;
     }
 }
