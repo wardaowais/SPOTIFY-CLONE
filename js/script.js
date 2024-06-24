@@ -19,19 +19,19 @@ function secondsToMinutesSeconds(seconds) {
 
 //function to fetch all the songs from folder
 async function getSongs(folder) {
-    // console.log("this ia folder",folder)
+    console.log("this ia folder line 22 ",folder)
     let a = await fetch(`/${folder}/`)
     currFolder = folder;
     let response = await a.text();
-    // console.log("this is response",response)
+    console.log("this is response line 26",response)
     let div = document.createElement("div")
     div.innerHTML = response;
     let as = div.getElementsByTagName("a")
-    // console.log("these are as inside div holding response xdata",as)
+    console.log("these are as inside div holding response xdata line 30",as)
     songs = []
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
-        // console.log("this is element", element, element.href.endsWith(".mp3"))
+        console.log("this is element", element, element.href.endsWith(".mp3"))
 
         if (element.href.endsWith(".mp3")) {
             console.log("tis is element.href",element.href)
@@ -41,6 +41,7 @@ async function getSongs(folder) {
     }
     //show all the songs in the play list
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
+    console.log("this is song ul",songUL)
     songUL.innerHTML = ""
     for (var song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li> 
@@ -138,7 +139,7 @@ async function displayAlbums() {
 async function main() {
 
     //get the list of all songs
-    await getSongs("https://raw.githubusercontent.com/wardaowais/SPOTIFY-CLONE/main/songs/cs/")
+    await getSongs("https://raw.githubusercontent.com/wardaowais/SPOTIFY-CLONE/main/songs/cs")
     playMusic(songs[0], true)
 
 
@@ -204,7 +205,7 @@ async function main() {
         console.log("this is next button",currentSong.src.split("/").slice(-1))
         
         console.log("at this point ",songs)
-        let index = songs.indexOf(currentSong.src.split("/").slice(-2)[0])
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
         if ((index + 1) < (songs.length)) {
             playMusic(songs[index + 1])
 
