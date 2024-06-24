@@ -204,7 +204,7 @@ async function main() {
         console.log("this is next button",currentSong.src.split("/").slice(-1))
         
         console.log("at this point ",songs)
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        let index = songs.indexOf(currentSong.src.split("/").slice(-2)[0])
         if ((index + 1) < (songs.length)) {
             playMusic(songs[index + 1])
 
@@ -245,6 +245,3 @@ async function main() {
 }
 
 main()
-
-
-
