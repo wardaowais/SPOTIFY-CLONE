@@ -174,8 +174,8 @@ body {
     justify-content: center;
     position: absolute;
 
-    top: 168px;
-    right: 17px;
+    bottom: 97px;
+    right: 34px;
     opacity: var(--a);
     transition: all 1s ease-out;
 
@@ -362,15 +362,21 @@ body {
 @media (max-width: 1347px) {
     .left {
         background-color: black;
-        position: absolute;
-        left: -120%;
+        left: -134%;
         transition: all .3s;
         z-index: 1;
         width: 373px;
         padding: 0;
+        height: 100vh;
+        position: fixed;
+        top: 0;
 
 
     }
+    .library{
+        height: 85vh;
+    }
+
 
     .songinfo,
     .songtime {
@@ -425,7 +431,11 @@ body {
     .cardContainer {
         margin: 0;
         justify-content: center;
+        max-height: unset;
+        overflow-y: unset;
+        margin-bottom: 43vh;
     }
+   
 
     .abovebar {
         flex-direction: column;
@@ -438,16 +448,36 @@ body {
 
 @media (max-width: 500px) {
 
-    .buttons {
-        padding: 15px 0px;
+    .header{
+        padding: 5px;
     }
 
+
+    .header>*{
+        padding: 9px;
+    }
+
+    .left{
+        position: fixed;
+        top: 0;
+        width: 100vw;
+
+    }
     .buttons>* {
-        margin: 0 15px 0 2px;
-
+        margin: 0 2px;
+    }
+    .card {
+        width: 100%;
     }
 
-    .card {
-        width: 80vw;
+    .playbar{
+        right: 18px;
+    }
+    
+
+ 
+
+    .spotifyPlaylists h1 {
+        padding: 4px 14px;
     }
 }
