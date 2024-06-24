@@ -138,7 +138,7 @@ async function displayAlbums() {
 async function main() {
 
     //get the list of all songs
-    await getSongs("songs/cs")
+    await getSongs("https://github.com/wardaowais/SPOTIFY-CLONE/tree/main/songs/cs")
     playMusic(songs[0], true)
 
 
